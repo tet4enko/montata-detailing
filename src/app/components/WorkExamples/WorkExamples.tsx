@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import Image from 'next/image';
 
-import { BlockTitle } from "@/components/BlockTitle";
+import { SectionTitle } from "@/components/SectionTitle";
 
 import styles from './WorkExamples.module.css';
 
@@ -68,7 +68,7 @@ export const WorkExamples: FC = () => {
     return (
         <div className={styles.WorkExamplesWrapper}>
             <div className={styles.WorkExamples}>
-                <BlockTitle text="Наши работы" />
+                <SectionTitle text="Наши работы" />
                 <div className={styles.Content}>
                     <div className={styles.LeftColumn}>
                         {LEFT_ITEMS.map((item) => renderItem(item))}

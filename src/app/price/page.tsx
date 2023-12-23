@@ -1,4 +1,4 @@
-import { BlockTitle } from '@/components/BlockTitle';
+import { SectionTitle } from '@/components/SectionTitle';
 
 import styles from './page.module.css';
 
@@ -7,7 +7,7 @@ export default function Price () {
     return (
         <div className={styles.Page}>
             <div className={styles.Content}>
-                <BlockTitle
+                <SectionTitle
                     text="ЦЕНЫ НА ДЕТЕЙЛИНГ УСЛУГИ"
                 />
                 <div className={styles.Description}>

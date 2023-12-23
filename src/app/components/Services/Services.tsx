@@ -3,7 +3,7 @@ import { FC } from "react";
 import cn from 'classnames';
 import Image from 'next/image';
 
-import { BlockTitle } from "@/components/BlockTitle";
+import { SectionTitle } from "@/components/SectionTitle";
 
 import styles from './Services.module.css';
 
@@ -72,7 +72,7 @@ const renderItem = ({ src, title, description, size }: Item, index: number) => {
 export const Services: FC = () => {
     return (
         <div className={styles.Services}>
-            <BlockTitle text="Услуги" />
+            <SectionTitle text="Услуги" />
             <div className={styles.Description}>
                 Индивидуальное обслуживание, гарантированный результат, использование сертифицированных автохимикатов — у нас вы будете чувствовать себя комфортно. Обратите внимание, что наши услуги предоставляются исключительно по предварительной записи.
             </div>
