@@ -1,0 +1,38 @@
+:root {
+    --color-tiffany: #21ded8;
+    --color-tiffany-hover: #4efff9;
+    --color-surface-page: #000;
+    --color-surface-secondary-page: #212121;
+
+    --typography-color-primary: #fff;
+    --typography-color-primary-inverse: #000;
+    --typography-color-secondary: #cdcdcd;
+    --typography-font-size-xs: 12px;
+    --typography-font-size-s: 16px;
+    --typography-font-size-m: 20px;
+    --typography-font-size-l: 28px;
+    --typography-font-size-xl: 40px;
+
+    --content-width: 1200px;
+
+    --color-transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
+    --block-inner-gap: 28px;
+    --block-padding: 50px 0;
+
+    --block-header-font-size: var(--typography-font-size-xl);
+    --block-description-font-size: var(--typography-font-size-m);
+}
+
+html {
+    color: var(--typography-color-primary);
+    background-color: var(--color-surface-page);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+}

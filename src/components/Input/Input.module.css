@@ -1,0 +1,14 @@
+.Input {
+    padding: 11px;
+
+    font-size: var(--typography-font-size-s);
+
+    color: var(--typography-color-secondary);
+    border: 1px solid var(--typography-color-secondary);
+    outline: none;
+    background-color: transparent;
+}
+
+.Input:focus {
+    border: 1px solid var(--color-tiffany);
+}

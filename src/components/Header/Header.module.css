@@ -1,0 +1,40 @@
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--content-width);
+    height: 80px;
+}
+
+.Menu {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+
+    margin: 0 165px;
+    padding: 0;
+
+    list-style: none;
+
+    font-size: var(--typography-font-size-xs);
+    text-transform: uppercase;
+}
+
+.Logo {
+    display: flex;
+}
+
+.MenuItem a {
+    text-decoration: none;
+}
+
+.MenuItemLink {
+    color: var(--typography-color-primary);
+
+    transition: var(--color-transition);
+}
+
+.MenuItemLink:hover {
+    color: var(--color-tiffany);
+}

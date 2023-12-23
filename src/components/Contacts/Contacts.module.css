@@ -1,0 +1,57 @@
+.Contacts {
+    --margin: 14px;
+
+    position: sticky;
+    z-index: 1;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 40px;
+
+    font-size: var(--typography-font-size-xs);
+
+    color: var(--typography-color-primary-inverse);
+    background-color: #cdcdcd;
+}
+
+.ContactsContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: var(--content-width);
+    height: 100%;
+}
+
+.Location {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: var(--typography-color-primary-inverse);
+}
+
+.LocationImage {
+    margin-right: var(--margin);
+}
+
+.SocialNetworks {
+    display: flex;
+    gap: var(--margin);
+
+    align-items: center;
+}
+
+.SocialNetworks .Icon {
+    height: 24px;
+}
+
+.PhoneNumber {
+    text-decoration: none;
+
+    color: var(--typography-color-primary-inverse);
+}

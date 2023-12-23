@@ -1,0 +1,86 @@
+.Page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    background-color: var(--color-surface-secondary-page);
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+
+    width: var(--content-width);
+
+    gap: 60px;
+
+    padding: 60px;
+}
+
+.Description {
+    font-size: var(--block-description-font-size);
+    font-weight: 100;
+}
+
+.H2 {
+    display: block;
+
+    margin: 0;
+
+    font-size: var(--typography-font-size-xl);
+    font-weight: bold;
+    text-align: center;
+
+    color: var(--color-tiffany);
+}
+
+.Section {
+    display: flex;
+    flex-direction: column;
+
+    gap: 48px;
+}
+
+.Services {
+    display: flex;
+    flex-direction: column;
+
+    gap: 38px;
+}
+
+.Service {
+    display: flex;
+    flex-direction: column;
+
+    font-size: var(--typography-font-size-l);
+    font-weight: bold;
+
+    gap: 35px;
+}
+
+.Service:not(:last-child) {
+    padding-bottom: 38px;
+
+    border-bottom: 1px solid var(--typography-color-secondary);
+}
+
+.H3 {
+    color: var(--color-tiffany);
+}
+
+.Table {
+    border-collapse: collapse;
+
+    text-align: left;
+}
+
+.TableHeader {
+    color: var(--typography-color-secondary);
+    border-bottom: 22px solid transparent;
+}
+
+.TableRow:not(:last-child) {
+    border-bottom: 16px solid transparent;
+}

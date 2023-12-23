@@ -1,0 +1,55 @@
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: var(--content-width);
+    margin: 50px 0;
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ContactsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: var(--block-inner-gap);
+}
+
+.Header {
+    margin-bottom: var(--block-inner-gap);
+
+    font-size: var(--typography-font-size-xl);
+    font-weight: bold;
+    text-transform: uppercase;
+
+    color: var(--color-tiffany);
+}
+
+.Address,
+.PhoneNumber,
+.Email {
+    font-size: var(--typography-font-size-m);
+    font-weight: 100;
+    text-decoration: none;
+
+    color: var(--typography-color-primary);
+
+    transition: var(--color-transition);
+}
+
+.Address:hover,
+.PhoneNumber:hover,
+.Email:hover {
+    color: var(--color-tiffany);
+}
+
+.SocialNetworks {
+    display: flex;
+    gap: 30px;
+}

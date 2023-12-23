@@ -1,0 +1,40 @@
+.WorkExamplesWrapper {
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+
+    background-color: var(--color-surface-secondary-page);
+}
+
+.WorkExamples {
+    display: flex;
+    flex-direction: column;
+
+    width: var(--content-width);
+    padding: var(--block-padding);
+    gap: var(--block-inner-gap);
+}
+
+.Content {
+    display: flex;
+    flex-direction: row;
+
+    gap: 30px;
+}
+
+.LeftColumn,
+.RightColumn {
+    position: relative;
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Item {
+    position: relative;
+
+    overflow: hidden;
+}

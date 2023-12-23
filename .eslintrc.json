@@ -1,0 +1,54 @@
+{
+  "plugins": ["@typescript-eslint", "simple-import-sort", "import-newlines", "object-pattern-newline"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "no-multi-spaces": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "no-trailing-spaces": "error",
+    "eol-last": ["error", "always"],
+    "indent": ["error", 4],
+    "semi": ["error", "always"],
+    "simple-import-sort/imports": [
+        "error",
+        {
+            "groups": [
+                ["^react"],
+                ["^\\u0000"],
+                ["^@?\\w"],
+                ["^"],
+                ["^\\."],
+                ["^.+\\.s?css$"]
+            ]
+        }
+    ],
+    "import-newlines/enforce": [
+        "error",
+        {
+            "max-len": 120
+        }
+    ],
+    "object-pattern-newline/enforce": [
+        "error",
+        {
+            "max-len": 120
+        }
+    ],
+    "react/jsx-max-props-per-line": "error",
+    "react/jsx-closing-bracket-location": "error",
+    "react/jsx-wrap-multilines": [
+        "error",
+        {
+            "declaration": "parens-new-line",
+            "assignment": "parens-new-line",
+            "return": "parens-new-line",
+            "arrow": "parens-new-line",
+            "condition": "parens-new-line",
+            "logical": "parens-new-line",
+            "prop": "parens-new-line"
+        }
+    ]
+  }
+}

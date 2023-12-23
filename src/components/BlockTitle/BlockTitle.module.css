@@ -1,0 +1,8 @@
+.BlockTitle {
+    margin: 0;
+
+    font-size: var(--block-header-font-size);
+    text-transform: uppercase;
+
+    color: var(--color-tiffany);
+}

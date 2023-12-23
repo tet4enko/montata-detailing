@@ -1,0 +1,45 @@
+.PromoSlider {
+    --margin-left: 150px;
+    position: relative;
+
+    width: var(--content-width);
+    height: 550px;
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--block-inner-gap);
+}
+
+.Gallery {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+
+    height: 100%;
+}
+
+.Header {
+    margin: 0;
+    padding-top: 150px;
+
+    font-size: var(--typography-font-size-xl);
+    text-transform: uppercase;
+}
+
+.Description {
+    width: 550px;
+
+    font-size: var(--typography-font-size-m);
+    font-weight: 100;
+}
+
+.Header,
+.Description,
+.AppointmentButton {
+    position: relative;
+
+    margin-left: var(--margin-left);
+}

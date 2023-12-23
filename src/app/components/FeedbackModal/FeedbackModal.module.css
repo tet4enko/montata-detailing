@@ -1,0 +1,40 @@
+.Wrapper {
+    width: 350px;
+}
+
+.Header {
+    margin-bottom: 6px;
+
+    font-size: var(--typography-font-size-m);
+    font-weight: bold;
+    text-align: center;
+}
+
+.Description {
+    font-size: var(--typography-font-size-xs);
+    text-align: center;
+
+    color: var(--typography-color-secondary);
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.Submit {
+    width: 100%;
+}
+
+.Agree {
+    margin-top: 20px;
+
+    font-size: var(--typography-font-size-xs);
+    text-align: center;
+
+    color: var(--typography-color-secondary);
+}

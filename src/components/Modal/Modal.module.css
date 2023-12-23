@@ -1,0 +1,29 @@
+.Modal {
+    position: fixed;
+    z-index: 10;
+
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+}
+
+.Modal_visible_true {
+    visibility: visible;
+}
+
+.ModalOverlay {
+    position: absolute;
+    z-index: -1;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+}
+
+.ModalContent {
+    min-width: 300px;
+    padding: 40px 60px;
+
+    background-color: var(--color-surface-secondary-page);
+}
