@@ -2,7 +2,13 @@ import { FC } from "react";
 
 import Image from 'next/image';
 
-import { EMAIL, INSTAGRAM_URL, PHONE_URL, TELEGRAM_URL, WHATSAPP_URL } from "@/const";
+import {
+    EMAIL,
+    INSTAGRAM_URL,
+    PHONE_URL,
+    TELEGRAM_URL,
+    WHATSAPP_URL
+} from "@/const";
 
 import styles from './Footer.module.css';
 

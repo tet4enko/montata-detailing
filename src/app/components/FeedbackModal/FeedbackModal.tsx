@@ -34,9 +34,7 @@ export const FeedbackModal: FC<FeedbackModalProps> = ({ visible, onClose }) => {
             From : "tetchenko@gmail.com",
             Subject : "Обратный звонок",
             Body: `${name} ${phone}`
-        }).then((data) => {
-            console.log(data);
-
+        }).then(() => {
             onClose();
         });
     }, [name, onClose, phone]);
