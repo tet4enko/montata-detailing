@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
+    "pm2:start": "pm2 start npm -- start",
     "lint": "next lint",
     "fixup:css": "./node_modules/.bin/stylelint '**/*.css' --fix",
     "fixup:eslint": "./node_modules/.bin/eslint ./src --ext .ts,.tsx --fix"
