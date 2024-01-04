@@ -10,8 +10,8 @@ import './globals.css';
 const OpenSans = Open_Sans({ subsets: ['cyrillic'] });
 
 export const metadata: Metadata = {
-    title: 'Montana Detailing – Детейлинг-центр в Симферополе',
-    description: 'Welcome to Next.js',
+    title: 'Montana Detailing',
+    description: 'Детейлинг-центр в Симферополе',
 };
 
 export default function RootLayout({
@@ -28,6 +28,10 @@ export default function RootLayout({
                 <script
                     async
                     src="https://smtpjs.com/v3/smtp.js"
+                />
+                <meta
+                    name="yandex-verification"
+                    content="98f5a2bb044e9c6e"
                 />
             </head>
             <body>
