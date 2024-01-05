@@ -16,22 +16,22 @@ type Item = {
 
 const LEFT_ITEMS: Item[] = [
     {
-        src: '/services/polirovka.jpg',
-        title: 'Полировка кузова',
-        description: 'От 1800 Р / деталь',
+        src: '/services/ceramic.png',
+        title: 'Керамическое покрытие кузова',
+        description: 'От 2300 Р / деталь',
         size: 's',
     },
     {
-        src: '/services/ceramic.jpg',
-        title: 'Керамическое покрытие кузова',
-        description: 'От 2300 Р / деталь',
+        src: '/services/polirovka.png',
+        title: 'Полировка кузова',
+        description: 'От 1800 Р / деталь',
         size: 'm',
     },
 ];
 
 const RIGHT_ITEMS: Item[] = [
     {
-        src: '/services/himchistka.jpg',
+        src: '/services/himchistka.png',
         title: 'Химчистка салона',
         description: 'От 1100 Р / деталь',
         size: 'm',

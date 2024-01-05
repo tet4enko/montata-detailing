@@ -12,16 +12,16 @@ import styles from './PromoSlider.module.css';
 
 const images: ReactImageGalleryItem[] = [
     {
-        original: "/gallery/1.png",
-        thumbnail: "/gallery/1.png",
+        original: "/gallery/1.jpg",
+        thumbnail: "/gallery/1.jpg",
     },
     {
         original: "/gallery/2.png",
         thumbnail: "/gallery/2.png",
     },
     {
-        original: "/gallery/3.png",
-        thumbnail: "/gallery/3.png",
+        original: "/gallery/3.jpg",
+        thumbnail: "/gallery/3.jpg",
     },
     {
         original: "/gallery/4.png",
