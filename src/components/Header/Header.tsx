@@ -41,10 +41,10 @@ export const Header: FC = () => {
                 className={styles.Logo}
             >
                 <Image
-                    src="/header-logo.svg"
+                    src="/header-logo.png"
                     alt="Montana logo"
-                    width={125}
-                    height={32}
+                    width={145}
+                    height={40}
                 />
             </Link>
             {/* <ul className={styles.Menu}>
