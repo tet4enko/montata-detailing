@@ -31,7 +31,15 @@ export default function RootLayout({
                 />
                 <meta
                     name="yandex-verification"
+                    content="f808775a0f3d84c7"
+                />
+                <meta
+                    name="yandex-verification"
                     content="98f5a2bb044e9c6e"
+                />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=0"
                 />
             </head>
             <body>
