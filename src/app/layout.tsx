@@ -9,6 +9,8 @@ import './globals.css';
 
 const OpenSans = Open_Sans({ subsets: ['cyrillic'] });
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export const metadata: Metadata = {
     title: 'Montana Detailing',
     description: 'Детейлинг-центр в Симферополе',
@@ -48,9 +50,10 @@ export default function RootLayout({
                 <Header />
                 {children}
                 <Footer />
-                <div
-                    dangerouslySetInnerHTML={{
-                        __html: `<!-- Yandex.Metrika counter -->
+                {isProduction ? (
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: `<!-- Yandex.Metrika counter -->
                         <script type="text/javascript" >
                            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
                            m[i].l=1*new Date();
@@ -66,8 +69,9 @@ export default function RootLayout({
                         </script>
                         <noscript><div><img src="https://mc.yandex.ru/watch/96052561" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
                         <!-- /Yandex.Metrika counter -->`
-                    }}
-                />
+                        }}
+                    />
+                ) : null}
             </body>
         </html>
     );
