@@ -1,34 +1,53 @@
 .Services {
     display: flex;
     flex-direction: column;
+}
 
-    width: var(--content-width);
-    padding: var(--block-padding);
-    gap: var(--block-inner-gap);
+.Services_platform_desktop {
+    width: 100%;
+    max-width: var(--content-width);
+    padding: var(--desktop-block-padding);
+    gap: var(--desktop-block-inner-gap);
+}
+
+.Services_platform_mobile {
+    padding: var(--mobile-block-padding);
+    gap: var(--mobile-block-inner-gap);
+
+    text-align: center;
 }
 
 .Description {
-    font-size: var(--block-description-font-size);
     font-weight: 100;
 }
 
-.Content {
-    display: flex;
-    flex-direction: row;
+.Services_platform_desktop .Description {
+    font-size: var(--block-description-font-size);
+}
 
+.Services_platform_mobile .Description {
+    font-size: var(--mobile-block-description-font-size);
+    text-align: left;
+}
+
+.Content {
+    display: grid;
+}
+
+.Services_platform_desktop .Content {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     gap: 30px;
 }
 
-.LeftColumn,
-.RightColumn {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: 30px;
+.Services_platform_mobile .Content {
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    gap: 20px;
 }
 
 .Item {
     position: relative;
+
+    padding-top: 100%;
 
     filter: grayscale(100%);
 
@@ -37,15 +56,32 @@
 
 .ItemText {
     position: absolute;
+}
+
+.Services_platform_desktop .ItemText {
     bottom: 20px;
     left: 20px;
+}
+
+.Services_platform_mobile .ItemText {
+    bottom: 0;
+    left: 10px;
+
+    text-align: left;
 }
 
 .ItemTitle {
     margin-bottom: 4px;
 
-    font-size: var(--typography-font-size-s);
     font-weight: bold;
+}
+
+.Services_platform_desktop .ItemTitle {
+    font-size: var(--typography-font-size-s);
+}
+
+.Services_platform_mobile .ItemTitle {
+    font-size: var(--typography-font-size-xxs);
 }
 
 .ItemShadow {
@@ -60,8 +96,12 @@
     box-shadow: inset 0 -60px 60px -60px #000;
 }
 
-.ItemDescription {
+.Services_platform_desktop .ItemDescription {
     font-size: var(--typography-font-size-xs);
+}
+
+.Services_platform_mobile .ItemDescription {
+    font-size: var(--typography-font-size-xxs);
 }
 
 .Item:hover {

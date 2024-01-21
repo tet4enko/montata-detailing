@@ -1,9 +1,12 @@
 import { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
+import { headers } from 'next/headers';
 
 import { Contacts } from '@/components/Contacts';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
+import { getPlatform } from '@/lib/getPlatform';
+import { Platform } from '@/types';
 
 import './globals.css';
 
@@ -21,6 +24,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+    const platform = getPlatform(headers().get('user-agent') || '');
+    const isDesktop = platform === Platform.DESKTOP;
+
     return (
         <html
             lang="ru"
@@ -46,10 +52,12 @@ export default function RootLayout({
                 <></>
             </head>
             <body>
-                <Contacts />
+                {isDesktop ? (
+                    <Contacts />
+                ) : null}
                 <Header />
                 {children}
-                <Footer />
+                <Footer platform={platform} />
                 {isProduction ? (
                     <div
                         dangerouslySetInnerHTML={{

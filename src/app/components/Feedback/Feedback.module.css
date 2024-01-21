@@ -1,5 +1,11 @@
-.Wrapper {
+.Feedback_platform_desktop {
     width: 350px;
+}
+
+.Feedback_platform_mobile {
+    padding: var(--mobile-block-padding);
+
+    background-color: var(--color-surface-secondary-page);
 }
 
 .Header {

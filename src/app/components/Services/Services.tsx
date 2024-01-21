@@ -4,50 +4,57 @@ import cn from 'classnames';
 import Image from 'next/image';
 
 import { SectionTitle } from "@/components/SectionTitle";
+import { Platform } from "@/types";
 
 import styles from './Services.module.css';
+
+interface ServicesProps {
+    platform: Platform
+}
 
 type Item = {
     src: string;
     title: string;
     description: string;
-    size: 's' | 'm'
 }
 
-const LEFT_ITEMS: Item[] = [
+const ITEMS: Item[] = [
     {
-        src: '/services/ceramic.png',
+        src: '/services/ceramic.jpg',
         title: 'Керамическое покрытие кузова',
-        description: 'От 2300 Р / деталь',
-        size: 's',
+        description: 'От 6000 Р',
     },
     {
-        src: '/services/polirovka.png',
+        src: '/services/polirovka.jpg',
         title: 'Полировка кузова',
-        description: 'От 1800 Р / деталь',
-        size: 'm',
+        description: 'От 7000 Р',
     },
-];
-
-const RIGHT_ITEMS: Item[] = [
     {
-        src: '/services/himchistka.png',
+        src: '/services/himchistka.jpg',
         title: 'Химчистка салона',
-        description: 'От 1100 Р / деталь',
-        size: 'm',
+        description: 'От 5000 Р',
     },
     {
-        src: '/services/plenka.png',
+        src: '/services/plenka.jpg',
         title: 'Оклейка кузова',
-        description: 'От 1450 Р / деталь',
-        size: 's',
+        description: 'От 10000 Р',
+    },
+    {
+        src: '/services/koja.jpg',
+        title: 'Реставрация кожи',
+        description: 'От 3000 Р',
+    },
+    {
+        src: '/services/moika.jpg',
+        title: 'Детейлинг-мойка',
+        description: 'От 2000 Р',
     },
 ];
 
-const renderItem = ({ src, title, description, size }: Item, index: number) => {
+const renderItem = ({ src, title, description }: Item, index: number) => {
     return (
         <div
-            className={cn(styles.Item, styles[`Item_size_${size}`])}
+            className={styles.Item}
             key={index}
         >
             <Image
@@ -69,20 +76,20 @@ const renderItem = ({ src, title, description, size }: Item, index: number) => {
     );
 };
 
-export const Services: FC = () => {
+export const Services: FC<ServicesProps> = (props) => {
+    const { platform } = props;
+
     return (
-        <div className={styles.Services}>
-            <SectionTitle text="Услуги" />
+        <div className={cn(styles.Services, styles[`Services_platform_${platform}`])}>
+            <SectionTitle
+                text="Услуги"
+                platform={platform}
+            />
             <div className={styles.Description}>
                 Индивидуальное обслуживание, гарантированный результат, использование сертифицированных автохимикатов — у нас вы будете чувствовать себя комфортно. Обратите внимание, что наши услуги предоставляются исключительно по предварительной записи.
             </div>
             <div className={styles.Content}>
-                <div className={styles.LeftColumn}>
-                    {LEFT_ITEMS.map((item, index) => renderItem(item, index))}
-                </div>
-                <div className={styles.RightColumn}>
-                    {RIGHT_ITEMS.map((item, index) => renderItem(item, index))}
-                </div>
+                {ITEMS.map((item, index) => renderItem(item, index))}
             </div>
         </div>
     );

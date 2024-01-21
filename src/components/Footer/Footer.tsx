@@ -1,5 +1,6 @@
 import { FC } from "react";
 
+import cn from 'classnames';
 import Image from 'next/image';
 
 import {
@@ -9,6 +10,7 @@ import {
     TELEGRAM_URL,
     WHATSAPP_URL
 } from "@/const";
+import { Platform } from "@/types";
 
 import styles from './Footer.module.css';
 
@@ -35,12 +37,20 @@ const SOCIAL_NETWORKS = [
     },
 ];
 
-export const Footer: FC = () => {
+interface FooterProps {
+    platform: Platform;
+}
+
+export const Footer: FC<FooterProps> = (props) => {
+    const { platform } = props;
+
+    const isDesktop = platform === Platform.DESKTOP;
+
     return (
-        <div className={styles.Footer}>
+        <div className={cn(styles.Footer, styles[`Footer_platform_${platform}`])}>
             <div className={styles.Content}>
                 <div className={styles.Header}>
-                    Контакты:
+                    Контакты
                 </div>
                 <div className={styles.ContactsWrapper}>
                     <a
@@ -52,21 +62,23 @@ export const Footer: FC = () => {
                         <br />
                         Пн - Сб с 11:00 до 20:00
                     </a>
-                    <div className={styles.Contacts}>
-                        <a
-                            className={styles.PhoneNumber}
-                            href="tel: +79785777970"
-                        >
-                            +7 978 5 777 970
-                        </a>
-                        <br />
-                        <a
-                            className={styles.Email}
-                            href={`mailto:${EMAIL}`}
-                        >
-                            {EMAIL}
-                        </a>
-                    </div>
+                    {platform === Platform.DESKTOP ? (
+                        <div className={styles.Contacts}>
+                            <a
+                                className={styles.PhoneNumber}
+                                href="tel: +79785777970"
+                            >
+                                +7 978 5 777 970
+                            </a>
+                            <br />
+                            <a
+                                className={styles.Email}
+                                href={`mailto:${EMAIL}`}
+                            >
+                                {EMAIL}
+                            </a>
+                        </div>
+                    ) : null}
                     <div className={styles.SocialNetworks}>
                         {SOCIAL_NETWORKS.map(({
                             src,
@@ -81,8 +93,8 @@ export const Footer: FC = () => {
                             >
                                 <Image
                                     src={src}
-                                    width={50}
-                                    height={50}
+                                    width={isDesktop ? 50 : 30}
+                                    height={isDesktop ? 50 : 30}
                                     alt={alt}
                                     title={alt}
                                 />
@@ -91,11 +103,10 @@ export const Footer: FC = () => {
                     </div>
                 </div>
             </div>
-            <Image
+            <img
+                className={styles.Image}
                 src="/my-life-my-rules.png"
-                width={700}
-                height={250}
-                alt="Моя машина – это отражение моей жопы"
+                alt="Моя машина – это отражение моей души"
             />
         </div>
     );

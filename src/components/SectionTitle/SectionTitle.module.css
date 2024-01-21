@@ -1,8 +1,15 @@
 .SectionTitle {
     margin: 0;
 
-    font-size: var(--block-header-font-size);
     text-transform: uppercase;
 
     color: var(--color-tiffany);
+}
+
+.SectionTitle_platform_desktop {
+    font-size: var(--block-header-font-size);
+}
+
+.SectionTitle_platform_mobile {
+    font-size: var(--mobile-block-header-font-size);
 }

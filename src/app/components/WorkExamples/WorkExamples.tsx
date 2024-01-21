@@ -2,8 +2,7 @@ import { FC } from "react";
 
 import Image from 'next/image';
 
-import { SectionTitle } from "@/components/SectionTitle";
-
+// import { SectionTitle } from "@/components/SectionTitle";
 import styles from './WorkExamples.module.css';
 
 type Item = {
@@ -68,7 +67,7 @@ export const WorkExamples: FC = () => {
     return (
         <div className={styles.WorkExamplesWrapper}>
             <div className={styles.WorkExamples}>
-                <SectionTitle text="Наши работы" />
+                {/* <SectionTitle text="Наши работы" /> */}
                 <div className={styles.Content}>
                     <div className={styles.LeftColumn}>
                         {LEFT_ITEMS.map((item) => renderItem(item))}

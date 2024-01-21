@@ -1,4 +1,4 @@
-import { SectionTitle } from '@/components/SectionTitle';
+// import { SectionTitle } from '@/components/SectionTitle';
 
 import styles from './page.module.css';
 
@@ -7,9 +7,9 @@ export default function Price () {
     return (
         <div className={styles.Page}>
             <div className={styles.Content}>
-                <SectionTitle
+                {/* <SectionTitle
                     text="ЦЕНЫ НА ДЕТЕЙЛИНГ УСЛУГИ"
-                />
+                /> */}
                 <div className={styles.Description}>
                     Индивидуальное обслуживание, гарантированный результат, использование сертифицированных автохимикатов — у нас вы будете чувствовать себя комфортно. Обратите внимание, что наши услуги предоставляются исключительно по предварительной записи.
                 </div>

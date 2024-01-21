@@ -3,8 +3,16 @@
     justify-content: space-between;
     align-items: center;
 
-    width: var(--content-width);
+    max-width: var(--content-width);
     margin: 50px 0;
+}
+
+.Footer_platform_mobile {
+    flex-direction: column;
+
+    margin: 0;
+    padding: var(--mobile-block-padding);
+    gap: var(--mobile-block-inner-gap);
 }
 
 .Content {
@@ -13,22 +21,40 @@
     justify-content: space-between;
 }
 
+.Footer_platform_mobile .Content {
+    align-items: center;
+
+    text-align: center;
+}
+
 .ContactsWrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    gap: var(--block-inner-gap);
+    gap: var(--desktop-block-inner-gap);
+}
+
+.Footer_platform_mobile .ContactsWrapper {
+    gap: var(--mobile-block-inner-gap);
+
+    align-items: center;
 }
 
 .Header {
-    margin-bottom: var(--block-inner-gap);
+    margin-bottom: var(--desktop-block-inner-gap);
 
     font-size: var(--typography-font-size-xl);
     font-weight: bold;
     text-transform: uppercase;
 
     color: var(--color-tiffany);
+}
+
+.Footer_platform_mobile .Header {
+    margin-bottom: var(--mobile-block-inner-gap);
+
+    font-size: var(--mobile-block-header-font-size);
 }
 
 .Address,
@@ -43,6 +69,12 @@
     transition: var(--color-transition);
 }
 
+.Footer_platform_mobile .Address,
+.Footer_platform_mobile .PhoneNumber,
+.Footer_platform_mobile .Email {
+    font-size: var(--mobile-block-description-font-size);
+}
+
 .Address:hover,
 .PhoneNumber:hover,
 .Email:hover {
@@ -52,4 +84,8 @@
 .SocialNetworks {
     display: flex;
     gap: 30px;
+}
+
+.Image {
+    max-width: 100%;
 }

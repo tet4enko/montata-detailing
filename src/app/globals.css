@@ -7,6 +7,7 @@
     --typography-color-primary: #fff;
     --typography-color-primary-inverse: #000;
     --typography-color-secondary: #cdcdcd;
+    --typography-font-size-xxs: 8px;
     --typography-font-size-xs: 12px;
     --typography-font-size-s: 16px;
     --typography-font-size-m: 20px;
@@ -17,11 +18,20 @@
 
     --color-transition: background-color 0.3s ease-out, color 0.3s ease-out;
 
-    --block-inner-gap: 28px;
-    --block-padding: 50px 0;
+    --desktop-block-inner-gap: 28px;
+    --desktop-block-padding: 50px 0;
+
+    --mobile-block-inner-gap: 20px;
+    --mobile-block-padding: 20px;
 
     --block-header-font-size: var(--typography-font-size-xl);
     --block-description-font-size: var(--typography-font-size-m);
+
+    --mobile-block-header-font-size: var(--typography-font-size-s);
+    --mobile-block-description-font-size: var(--typography-font-size-xs);
+
+    --toastify-color-progress-success: var(--color-tiffany) !important;
+    --toastify-icon-color-success: var(--color-tiffany) !important;
 }
 
 html {

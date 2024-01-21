@@ -3,7 +3,10 @@
 import { FC, useState } from "react";
 import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
 
+import cn from 'classnames';
+
 import { Button } from "@/components/Button";
+import { Platform } from "@/types";
 
 import { FeedbackModal } from "../FeedbackModal/FeedbackModal";
 
@@ -23,17 +26,23 @@ const images: ReactImageGalleryItem[] = [
         original: "/gallery/3.png",
         thumbnail: "/gallery/3.png",
     },
-    {
-        original: "/gallery/4.png",
-        thumbnail: "/gallery/4p.png",
-    },
+    // {
+    //     original: "/gallery/4.png",
+    //     thumbnail: "/gallery/4p.png",
+    // },
 ];
 
-export const PromoSlider: FC = () => {
+interface PromoSliderProps {
+    platform: Platform
+}
+
+export const PromoSlider: FC<PromoSliderProps> = (props) => {
+    const { platform } = props;
+
     const [isModalVisible, setIsModalVisible] = useState(false);
 
     return (
-        <div className={styles.PromoSlider}>
+        <div className={cn(styles.PromoSlider, styles[`PromoSlider_platform_${platform}`])}>
             <ImageGallery
                 items={images}
                 additionalClass={styles.Gallery}
